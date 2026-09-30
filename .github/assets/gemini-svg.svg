@@ -1,0 +1,76 @@
+<!-- SARAH Profile | Enhanced -->
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1184" viewBox="0 0 800 1184">
+<style>
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 900; font-display: swap; src: url(https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuGkyMZhrib2Bg-4.woff2) format('woff2'); }
+    @keyframes drift-r { 0%, 100% { transform: translate(0,0); opacity: 0.6; } 50% { transform: translate(35px,-18px); opacity: 1; } }
+    @keyframes drift-l { 0%, 100% { transform: translate(0,0); opacity: 0.55; } 50% { transform: translate(-30px,16px); opacity: 0.95; } }
+    @keyframes drift-u { 0%, 100% { transform: translate(0,0); opacity: 0.7; } 50% { transform: translate(25px,-25px); opacity: 1.05; } }
+    @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 0.6; } 50% { transform: scale(1.2); opacity: 0.35; } }
+    @keyframes scan { 0% { transform: translate(-900px,0); } 100% { transform: translate(900px,0); } }
+    @keyframes ring-pulse { 0%, 100% { opacity: 0.15; } 50% { opacity: 0.35; } }
+    @keyframes draw { 0% { stroke-dashoffset: 500; } 100% { stroke-dashoffset: 0; } }
+    @keyframes dot-float { 0%, 100% { opacity: 0.35; } 50% { opacity: 0.9; } }
+    @keyframes particle-fade { 0%, 100% { opacity: 0; } 40%, 60% { opacity: var(--peak, 0.5); } }
+    .g-dr { animation: drift-r 8s ease-in-out infinite; }
+    .g-dl { animation: drift-l 9s ease-in-out infinite 0.3s; }
+    .g-du { animation: drift-u 7s ease-in-out infinite 0.6s; }
+    .g-p { animation: pulse 6s ease-in-out infinite; }
+    .g-scan { animation: scan 4.5s linear infinite; }
+    .g-ring { animation: ring-pulse 4s ease-in-out infinite; }
+    .g-draw { animation: draw 3s ease-in-out infinite; stroke-dasharray: 250 250; }
+    .g-dot { animation: dot-float 5s ease-in-out infinite; }
+    .particle { animation: particle-fade var(--dur) ease-in-out infinite; opacity: 0; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation: none !important; }
+      .particle { opacity: 0.3 !important; }
+    }
+  </style>
+<defs>
+    <radialGradient id="g1" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(120,40,255,0.6)"/><stop offset="100%" stop-color="rgba(120,40,255,0)"/></radialGradient>
+    <radialGradient id="g2" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(0,200,220,0.5)"/><stop offset="100%" stop-color="rgba(0,200,220,0)"/></radialGradient>
+    <radialGradient id="g3" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(220,40,200,0.45)"/><stop offset="100%" stop-color="rgba(220,40,200,0)"/></radialGradient>
+    <radialGradient id="g4" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(40,120,255,0.4)"/><stop offset="100%" stop-color="rgba(40,120,255,0)"/></radialGradient>
+    <radialGradient id="g5" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="rgba(80,50,220,0.35)"/><stop offset="100%" stop-color="rgba(80,50,220,0)"/></radialGradient>
+    <linearGradient id="scg" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="rgba(120,200,255,0)"/>
+      <stop offset="40%" stop-color="rgba(120,200,255,0.12)"/>
+      <stop offset="50%" stop-color="rgba(160,120,255,0.45)"/>
+      <stop offset="60%" stop-color="rgba(120,200,255,0.12)"/>
+      <stop offset="100%" stop-color="rgba(120,200,255,0)"/>
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(110,80,220,0.06)" stroke-width="0.5"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+<rect width="800" height="1184" rx="24" fill="#060610" stroke="rgba(110,80,220,0.2)" stroke-width="1.5"/>
+<rect width="800" height="1184" rx="24" fill="url(#grid)"/>
+    <g>
+      <ellipse class="g-dr" cx="200" cy="140" rx="180" ry="110" fill="url(#g1)"/>
+      <ellipse class="g-dl" cx="620" cy="160" rx="160" ry="95" fill="url(#g2)"/>
+      <ellipse class="g-du" cx="420" cy="110" rx="140" ry="90" fill="url(#g3)"/>
+      <ellipse class="g-p" cx="100" cy="180" rx="120" ry="80" fill="url(#g4)"/>
+      <rect class="g-scan" x="-200" y="120" width="400" height="40" fill="url(#scg)" opacity="0.35"/>
+      <circle class="g-ring" cx="400" cy="140" r="120" fill="none" stroke="rgba(120,200,255,0.15)" stroke-width="0.8"/>
+      <circle class="g-ring" cx="400" cy="140" r="80" fill="none" stroke="rgba(200,120,255,0.12)" stroke-width="0.6" style="animation-delay:0.5s"/>
+      <path class="g-draw" d="M 30 20 L 30 10 L 45 10" fill="none" stroke="rgba(126,231,255,0.7)" stroke-width="2.5" stroke-linecap="round"/>
+      <path class="g-draw" d="M 770 20 L 770 10 L 755 10" fill="none" stroke="rgba(232,200,255,0.7)" stroke-width="2.5" stroke-linecap="round" style="animation-delay:0.5s"/>
+      <path class="g-draw" d="M 30 260 L 30 270 L 45 270" fill="none" stroke="rgba(255,136,204,0.6)" stroke-width="2.5" stroke-linecap="round" style="animation-delay:1s"/>
+      <path class="g-draw" d="M 770 260 L 770 270 L 755 270" fill="none" stroke="rgba(126,231,255,0.5)" stroke-width="2.5" stroke-linecap="round" style="animation-delay:1.5s"/>
+      <circle class="g-dot" cx="60" cy="75" r="2" fill="#7ee7ff"/>
+      <circle class="g-dot" cx="740" cy="185" r="2" fill="#e8c8ff" style="animation-delay:1.5s"/>
+      <circle class="g-dot" cx="700" cy="90" r="1.5" fill="#ff88cc" style="animation-delay:2.5s"/>
+      
+      <!-- NOME ALTERADO PARA SARAH -->
+      <text x="400" y="92" text-anchor="middle" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="48" font-weight="900" fill="#ffffff" letter-spacing="15" filter="url(#glow)">SARAH</text>
+      
+      <text x="400" y="132" text-anchor="middle" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="11" fill="rgba(126,231,255,0.9)" letter-spacing="6" font-weight="700">SYSTEMS PROGRAMMER</text>
+      <line x1="260" y1="150" x2="540" y2="150" stroke="rgba(126,231,255,0.25)" stroke-width="1" filter="url(#glow)"/>
+      <text x="400" y="175" text-anchor="middle" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="10" fill="rgba(232,200,255,0.8)" letter-spacing="3" font-weight="600">PERFORMANCE ENGINEER  |  OSDEV</text>
+      <text x="400" y="200" text-anchor="middle" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="9.5" fill="rgba(126,231,255,0.6)" letter-spacing="2" font-weight="500">x86/ARM INTERNALS  •  BARE-METAL  •  SoC VALIDATION</text>
+      <text x="400" y="225" text-anchor="middle" font-family="'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif" font-size="9" fill="rgba(100,100,140,0.5)" letter-spacing="1.5">github.com/acedmicabhishek</text>
+    </g>
+</svg>
