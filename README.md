@@ -1,5 +1,3 @@
-## 💜 Hello, I am Sarah.
-
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=5k44r&label=Profile%20views&color=0e75b6&style=flat" alt="5k44r" />
 </p>
