@@ -1,11 +1,10 @@
 ## 💜 Hello, I am Sarah.
 
-<div style="display: inline_block"><br>
-  <img align="center" alt="Rafa-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
-  <img align="center" alt="Rafa-Ts" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-plain.svg">
-  <img align="center" alt="Rafa-React" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg">
-  <img align="center" alt="Rafa-Python" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg">
-</div>
+<p align="center">
+  <img src="https://komarev.com/ghpvc/?username=5k44r&label=Profile%20views&color=0e75b6&style=flat" alt="5k44r" />
+</p>
+
+![5k44r Profile](./.github/assets/profile.svg)
   
   ##
  
